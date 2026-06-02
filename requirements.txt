@@ -1,6 +1,2 @@
-<<<<<<< HEAD
-fastapi
-=======
-fastapi
->>>>>>> 39890db4421ee0c480cdf971fee2bbf959217f16
-uvicorn
+fastapi==0.110.0
+uvicorn==0.28.0
