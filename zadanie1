@@ -1,0 +1,21 @@
+Zadanie 1
+Autor: Szymon Jagusiak
+
+1. Dokumentacja aplikacji
+Aplikacja została napisana w języku Python z wykorzystaniem frameworka FastAPI.
+Aplikacja po uruchomieniu wyświetla w logach datę, autora oraz port (widoczne na zrzucie ekranu w punkcie 3c).
+Interfejs webowy pozwala na wybór miasta i wyświetlenie aktualnej temperatury.
+
+2. Plik Dockerfile (Optymalizacja)
+Zastosowano Multistage Build, aby zminimalizować rozmiar obrazu końcowego. 
+- Wykorzystano obraz bazowy `python:3.11-slim`.
+- Zastosowano warstwę `builder` do instalacji zależności, co optymalizuje cache.
+- Dodano metadane zgodne ze standardem OCI (`LABEL`).
+- Dodano instrukcję `HEALTHCHECK`.
+
+3. Polecenia 
+
+Budowanie obrazu:
+
+docker build -t szymonj1/pogoda-app:v1 .
+docker run -d -p 8080:8080 --name zadanie1 szymonj1/pogoda-app:v1
