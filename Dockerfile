@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 FROM python:3.11-slim AS builder
 
 WORKDIR /app
@@ -26,7 +26,6 @@ HEALTHCHECK --interval=30s --timeout=3s \
 
 EXPOSE 8080
 
-=======
 FROM python:3.11-slim AS builder
 
 WORKDIR /app
@@ -54,5 +53,5 @@ HEALTHCHECK --interval=30s --timeout=3s \
 
 EXPOSE 8080
 
->>>>>>> 39890db4421ee0c480cdf971fee2bbf959217f16
+
 CMD ["python", "-m", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080"]
